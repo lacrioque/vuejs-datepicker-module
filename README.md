@@ -5,7 +5,10 @@
 [![Coveralls github](https://img.shields.io/coveralls/github/charliekassel/vuejs-datepicker.svg)](https://coveralls.io/github/charliekassel/vuejs-datepicker?branch=master)
 [![Downloads](https://img.shields.io/npm/dm/vuejs-datepicker.svg)](https://www.npmjs.com/package/vuejs-datepicker)
 
-A datepicker Vue component. Compatible with Vue 2.x
+A datepicker Vue component. Compatible with Vue 2.x. Only usable as module.
+
+Not my work head over to https://github.com/charliekassel/vuejs-datepicker to see the real thing.
+This was just slightly changed to fit my needs.
 
 - [Demo](#demo)
 - [Install](#install)
@@ -29,12 +32,13 @@ To view demo examples locally clone the repo and run `npm install && npm run ser
 ## Install
 
 ``` bash
-npm install vuejs-datepicker --save
+npm install vuejs-datepicker-module --save
 ```
 
 
 ``` javascript
 import Datepicker from 'vuejs-datepicker';
+import 'vuejs-datepicker/dist/vuejs-datepicker.css';
 
 export default {
   // ...

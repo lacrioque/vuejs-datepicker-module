@@ -11,21 +11,12 @@ export default [{
   output: [
     {
       file: 'dist/vuejs-datepicker.js',
-      format: 'umd',
-      name: 'vuejsDatepicker'
-    },
-    {
-      file: 'dist/vuejs-datepicker.common.js',
-      format: 'cjs'
-    },
-    {
-      file: 'dist/vuejs-datepicker.esm.js',
       format: 'es'
     }
   ],
   plugins: [
     vue({css: true}),
-    postcss({plugins: [autoprefixer()]}),
+    postcss({plugins: [autoprefixer()], extract: 'dist/vuejs-datepicker.css'}),
     commonjs(),
     babel({exclude: 'node_modules/**'})
   ]
@@ -33,12 +24,12 @@ export default [{
   input: path.join(__dirname, '..', 'src', 'components', 'Datepicker.vue'),
   output: {
     file: 'dist/vuejs-datepicker.min.js',
-    format: 'umd',
+    format: 'es',
     name: 'vuejsDatepicker'
   },
   plugins: [
     vue({css: true}),
-    postcss({plugins: [autoprefixer()]}),
+    postcss({plugins: [autoprefixer()], extract: 'dist/vuejs-datepicker.css'}),
     commonjs(),
     terser(),
     babel({exclude: 'node_modules/**'})
